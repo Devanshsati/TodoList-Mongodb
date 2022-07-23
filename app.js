@@ -9,7 +9,7 @@ const day = date.getDate();
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
-mongoose.connect("mongodb://localhost:27017/todolistDB", {useNewUrlParser: true});
+mongoose.connect("mongodb+srv://Devanshsati:devansh123@cluster0.cbwhkxh.mongodb.net/todolistDB", {useNewUrlParser: true});
 
 //-------------------------------------------------------------------------------------------------------------
 
@@ -129,6 +129,6 @@ app.post("/delete", function(req, res){
 
 //-------------------------------------------------------------------------------------------------------------
 
-app.listen(process.env.PORT || 5000, ()=>{
+app.listen(5000, ()=>{
   console.log("Server started on port: 5000");
 });
