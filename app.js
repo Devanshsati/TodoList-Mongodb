@@ -9,6 +9,7 @@ const day = date.getDate();
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
+mongoose.set('strictQuery', true);
 mongoose.connect("mongodb+srv://Devanshsati:devansh123@cluster0.cbwhkxh.mongodb.net/todolistDB", {useNewUrlParser: true});
 
 //-------------------------------------------------------------------------------------------------------------
